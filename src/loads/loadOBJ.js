@@ -54,7 +54,11 @@ function loadOBJ(renderer, path, name) {
 									'uKd': { type: '3fv', value: mat.color.toArray() }
 								},[],VertexShader, FragmentShader);
 							}
-							
+
+							// let myMaterial = new PhongMaterial(mat.color.toArray(), colorMap, mat.specular.toArray(),
+							// 	renderer.lights[0].entity.mat.intensity);
+
+
 							let meshRender = new MeshRender(renderer.gl, mesh, myMaterial);
 							renderer.addMesh(meshRender);
 						}
